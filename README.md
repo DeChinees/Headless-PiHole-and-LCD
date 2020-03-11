@@ -1,5 +1,38 @@
 # Headless PiHole with LCD
 
+## Supplier Instructions
+About the system of 3.5 touch screen
+The screen can be used for Raspberry Pi 4/3B+/3B/2B 
+The touch screen need to configure the driver to use , it is suitable for Raspbian/Ubuntu/Kali-linux , if you use for other system , you need to congigure by yourself.
+
+We provide the configure method :
+
+- Step 1：Download the Raspbian IMG
+[https://www.raspberrypi.org/downloads/raspbian/]
+
+- Step 2: Burn the system image
+If you don't know how to do that,you can refer to the Raspberry Pi office tutorial
+
+- Step 3: Open terminal(SSH) and install the driver on RaspberryPi
+(tested on RaspberryPi 4B,3B+,3B,2B,2B+,1B,ZERO)
+
+Run:
+```
+sudo rm -rf LCD-show
+
+git clone https://github.com/goodtft/LCD-show.git
+
+chmod -R 755 LCD-show
+
+cd LCD-show/
+
+sudo ./LCD35-show
+```
+Wait a few minutes, when the system reboot , it will work.
+
+You can also download the system image which we already configured well by the end of this links :
+[http://www.lcdwiki.com/3.5inch_RPi_Display]
+
 ## Prerequisites
 Install xserver video drivers.  
 ```Bash
